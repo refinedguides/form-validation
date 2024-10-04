@@ -32,16 +32,13 @@ const validateInput = (input) => {
   }
 
   input.setCustomValidity("");
-
-  checkValidationRules(input);
-
-  const isValid = input.checkValidity();
-
   if (input.validity.patternMismatch) {
     input.setCustomValidity(input.title);
   }
 
-  input.classList.toggle("invalid", !isValid);
+  checkValidationRules(input);
+
+  input.classList.toggle("invalid", !input.checkValidity());
 
   errorText.textContent = input.validationMessage;
 };

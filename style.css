@@ -17,10 +17,11 @@
 
 body {
   color: #333;
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  padding-top: 2rem;
   background: var(--background-color);
 }
 
@@ -36,6 +37,7 @@ form {
   border-radius: 5px;
   width: min(480px, 90%);
   display: grid;
+  margin-block: auto;
 }
 
 label {
